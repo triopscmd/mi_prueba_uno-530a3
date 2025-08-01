@@ -1,0 +1,62 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+.report/
+
+# Node.js
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# production
+/dist
+/build
+.vite
+.parcel-cache
+
+# misc
+.DS_Store
+.env.local
+.env.*.local
+.cache
+.npm
+.eslintcache
+*.tgz
+.yarn-integrity
+.next
+.nuxt
+.output
+.vercel
+.netlify
+.pnpm-store
+
+# VSCode
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/c_cpp_properties.json
+
+# OSX
+.DS_Store
+
+# IDEs and other tools
+.idea
+.project
+.classpath
+.c9
+*.iml
+*.iws
+*.ipr
+*.swp
+*.bak
+*.orig
