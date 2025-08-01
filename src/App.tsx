@@ -1,32 +1,25 @@
+```typescript
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import DashboardPage from './pages/DashboardPage';
-import Button from './components/ui/Button';
+import KanbanBoardPage from './pages/KanbanBoardPage';
+import TaskListPage from './pages/TaskListPage';
+import TimelinePage from './pages/TimelinePage';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
-      <header className="w-full max-w-4xl bg-white shadow-md rounded-lg p-6 mb-8 text-center">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Welcome to Asana-Lite
-        </h1>
-        <p className="text-gray-600">
-          This is the root component of your application.
-        </p>
-      </header>
-
-      <main className="w-full max-w-4xl">
-        <DashboardPage />
-      </main>
-
-      <div className="mt-8">
-        <p className="text-gray-700 mb-4">
-          Testing our reusable Button component:
-        </p>
-        <Button onClick={() => alert('Button Clicked!')}>
-          Click Me
-        </Button>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<DashboardPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/kanban" element={<KanbanBoardPage />} />
+        <Route path="/tasks" element={<TaskListPage />} />
+        <Route path="/timeline" element={<TimelinePage />} />
+        {/* Future routes can be added here, e.g., /projects, /settings, /auth */}
+        {/* Add a catch-all route for 404 Not Found if desired: */}
+        {/* <Route path="*" element={<NotFoundPage />} /> */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 
